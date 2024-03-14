@@ -1,0 +1,73 @@
+type,type_id
+Photographer,0
+Creator,1
+Artist,2
+Cartographer,3
+Delineator,4
+Author,5
+Surveyor,6
+Compiler,7
+Translator,8
+Contributor,9
+Engraver,10
+Cinematographer,11
+Director,12
+Illustrator,13
+Sponsor,14
+Draftsman,15
+Editor,16
+Corrector,17
+Responsible Party,18
+Calligrapher,19
+Interviewee,20
+Interviewer,21
+Associated Name,22
+Printer,23
+Lithographer,24
+Donor,25
+Recording Engineer,26
+Musician,27
+Composer,28
+Architect,29
+References,30
+Attributed Name,31
+Dedicatee Name,32
+Signer,33
+Copyright Holder,34
+Collector,35
+Printmaker,36
+Copyright claimant,37
+Performer,38
+Owner,39
+Commentator,40
+Etcher,41
+Wood-engraver,42
+Scribe,43
+"Author of Introduction, etc.",44
+"Author of Afterword, Colophon, etc.",45
+Scientific advisor,46
+Speaker,47
+Commentator for Written Text,48
+Illuminator,49
+Librettist,50
+Client,51
+Transcriber,52
+Collaborator,53
+Producer,54
+Videographer,55
+Vocalist,56
+Patron,57
+Funder,58
+Annotator,59
+Woodcutter,60
+Designer,61
+Author in Quotations or Text Extracts,62
+Lyricist,63
+Type Designer,64
+Animator,65
+Writer of added text,66
+Project Director,67
+Dubious Author,68
+Censor,69
+Engineer,70
+Lead,71
