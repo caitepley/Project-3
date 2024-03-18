@@ -10,13 +10,14 @@ We chose to use a relational database because the data from our source file had 
 
 ##  Instructions on how to use and interact with the project
 The 'Resources' folder contains all of the final .csv files, as well as the source file, and the final tables uploaded into a SLQite database.
-#### Source file
+### Source file
 - wdl_data_reduced.csv
-Note: this is not the complete dataset from the loc.gov website. We had to remove items from the file to make it small enough to upload to GitHub. We also chose to remove some of the columns that we decided were less important to include due to time constraints.
+
+**Note:** this is not the complete dataset from the loc.gov website. We had to remove items from the file to make it small enough to upload to GitHub. We also chose to remove some of the columns that we decided were less important to include due to time constraints.
 - main_item.csv
 Note: this file was used as reference during the project, but does not appear in any code
 
-#### Final .csv files
+### Final .csv files
 - Dewey.csv
 - col_mapping_new.csv
 - creator_id.csv
@@ -34,11 +35,11 @@ Note: this file was used as reference during the project, but does not appear in
 - subject_id.csv
 - subject_item.csv
 
-#### SQLite database
+### SQLite database
 - project_3.sqlite
 
-Outside of the Resources folder (in the main part of the repository) there are the files that contain the ETL workflows to create the final .csv files
-#### ETL files
+#### Outside of the Resources folder (in the main part of the repository) there are the files that contain the ETL workflows to create the final .csv files
+### ETL files
 - LOC_new.ipynb
 - creator_processing.ipynb
 - dewey.ipynb
@@ -47,13 +48,26 @@ Outside of the Resources folder (in the main part of the repository) there are t
 - place_id_processing
 - subject_processing.ipynb
 
+#### To create the tables in pgAdmin4
+### Schema files
+- schema.sql
+- engineering_fk_constraint.sql
+
+**Note:** running these SQL files in pgAdmin4 will not automatically upload the data that goes with them into pgAdmin4. You will need to manually import the data using the import/export data functionality available in pgAdmin4.
 
 
-There is also a processing file that was used to create the SQLite database
-#### Code to create SQLite database
+There is also a processing file that was used to create the SQLite database. The SQLite database is used to load data into the Flask API
+### Code to create SQLite database
 - sqlite_processing.ipynb
+### Flask API
+- flask_app.py
 
+### Run the Project
+To run the Jupyter notebooks (all the files ending in .ipynb) in this repository, you will need to have Python installed on your local machine. Then the files can either be ran cell-by-cell or as a whole to produce the final .csv files used in the database. 
 
+To load the tables and data into pgAdmin4, you will need to create a database in pgAdmin4 and then copy-paste the .sql files (schema.sql and engineering_fk_constraint.sql) from this repository into query tools in pgAdmin4. Once the SQl is executed and the tables appear in the database, you can manually import the data from the .csv files into their corresponding tables.
+
+To run the Flask API, you will need to run the python file (flask_app.py) in the terminal. This should produce a link to an HTML document that you can access via a browser. Once in the browser, you can click the various hyperlinks to view the individual tables from the database in JSON format.
 
 ## Ethical Considerations
 The dataset we used for our project did not contain any personally identifiable information (PII) other than the names of the creators of the items included in the dataset. However, since there wasn't any other PII (like contact information, addresses, or social security numbers) we did not to take any special measures to protect the creator's information. Had there been other PII, we would have either had to remove it from the dataset (if it wasn't necessary) or add some security measure(s) to make sure that only authorized individuals would be able to access the information.
