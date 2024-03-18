@@ -50,7 +50,7 @@ CREATE TABLE ins_mapping (
 
 CREATE TABLE item_codes(
 	item_type VARCHAR(10),
-	item VARCHAR(100)
+	item VARCHAR(100) PRIMARY KEY
 );
 
 CREATE TABLE lang_item (

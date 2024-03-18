@@ -1,4 +1,4 @@
-Dewey Decimal Code,genre
+dewey_dec_code,genre
 973,History & geography
 391,Literature
 912,History & geography
@@ -41,7 +41,6 @@ Dewey Decimal Code,genre
 392,Literature
 333.912,Literature
 910.970,History & geography
-979,History & geography
 226,Literature
 912.919,History & geography
 912.957,History & geography
@@ -446,6 +445,7 @@ Dewey Decimal Code,genre
 361.973,Literature
 758,Literature
 741.973,Literature
+979,History & geography
 978,History & geography
 331.979,Literature
 331,Literature
