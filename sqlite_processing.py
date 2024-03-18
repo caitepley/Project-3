@@ -16,7 +16,7 @@ c.execute('''DROP TABLE IF EXISTS creator_type_item''')
 c.execute('''DROP TABLE IF EXISTS dewey''')
 c.execute('''DROP TABLE IF EXISTS ins_mapping''')
 c.execute('''DROP TABLE IF EXISTS item_codes''')
-c.execute('''DROP TABLE IF EXISTS items''')
+c.execute('''DROP TABLE IF EXISTS aitems''')
 c.execute('''DROP TABLE IF EXISTS lang_item''')
 c.execute('''DROP TABLE IF EXISTS languages_id''')
 c.execute('''DROP TABLE IF EXISTS place_id''')
@@ -75,18 +75,18 @@ csv_item_codes = pd.read_csv("Resources/item_codes_new.csv")
 csv_item_codes.to_sql("item_codes", conn, if_exists='append', index=False)
 
 
-c.execute('''CREATE TABLE items ( title VARCHAR(1000),
+c.execute('''CREATE TABLE aitems ( title VARCHAR(1000),
 	col VARCHAR(1000),
 	wdl_url VARCHAR(1000),
 	ins_key VARCHAR(300),
 	pub_key VARCHAR(300),
 	dewey_dec_code VARCHAR(15),
-	type_id VARCHAR(10),
+	item_code VARCHAR(10),
 	date VARCHAR(100),
 	item_id INT PRIMARY KEY)''')
 
 csv_items = pd.read_csv("Resources/items_csv.csv")
-csv_items.to_sql("items", conn, if_exists='append', index=False)
+csv_items.to_sql("aitems", conn, if_exists='append', index=False)
 
 
 c.execute('''CREATE TABLE lang_item (item_id int,

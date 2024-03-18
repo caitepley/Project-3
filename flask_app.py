@@ -21,7 +21,7 @@ Base = automap_base()
 Base.prepare(autoload_with=engine)
 
 # Save references to each table
-print(dir(Base.classes))
+
 col_mapping = Base.classes.col_mapping
 creator_id = Base.classes.creator_id
 creator_type_id = Base.classes.creator_type_id
@@ -29,7 +29,7 @@ creator_type_item = Base.classes.creator_type_item
 dewey = Base.classes.dewey
 ins_mapping = Base.classes.ins_mapping
 item_codes = Base.classes.item_codes
-items = Base.classes.items
+items = Base.classes.aitems
 lang_item = Base.classes.lang_item
 languages_id = Base.classes.languages_id
 place_id = Base.classes.place_id
@@ -37,6 +37,8 @@ place_item = Base.classes.place_item
 pub_mapping = Base.classes.pub_mapping
 subject_id = Base.classes.subject_id
 subject_item = Base.classes.subject_item
+
+
 
 
 # Create our session (link) from Python to the DB
@@ -136,6 +138,7 @@ def type_item():
         item_dict["item_id"] = i_id
         item_dict["creator_type_id"] = creator_type
         item_dict["creator_id"] = creator
+        all.append(item_dict)
 
     return jsonify(all)
 
@@ -146,6 +149,7 @@ def dew():
     results = session.query(dewey.dewey_dec_code, dewey.genre).all()
 
     # Create a dictionary from the row data and append to a list 
+    all_dewey = []
     for d, g in results:
         dewey_dict = {}
         dewey_dict["Dewey Decimal Code"] = d
@@ -189,7 +193,7 @@ def codes():
 def get_item():
     
     # Return all collection values
-    results = session.query(items.title, items.col, items.wdl_url, items.ins_key, items.pub_key, items.dewey_dec_code, items.type_id,items.date,items.item_id).all()
+    results = session.query(items.title, items.col, items.wdl_url, items.ins_key, items.pub_key, items.dewey_dec_code, items.item_code,items.date,items.item_id).all()
 
     # Create a dictionary from the row data and append to a list 
     all_item = []
