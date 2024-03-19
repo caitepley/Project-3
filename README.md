@@ -1,7 +1,7 @@
 # Project-3
 
 ## Overview
-For our project, we are using data from the Dataset of World Digital Library available on the Library of Congress’ website (loc.gov).  The data is available in a .csv format, so our goal was to extract, transform, and load the data into a relational database that can be used to access and analyze the data more readily than its current format. In a relational database format, the item records available in this dataset are more easily updated and are less likely to produce inconsistencies and errors when updating.
+For our project, we are using data from the Dataset of World Digital Library available on the Library of Congress’ website (loc.gov).  The data is available in a large, unwieldy .csv format, so our goal was to extract, transform, and load the data into a relational database that can be used to access and analyze the data more readily than its current format. In a relational database format, the item records available in this dataset are more easily updated and are less likely to produce inconsistencies and errors when updating.
 	
 We chose this topic for our project because we thought it would be a good real world application of a relational database. Libraries often need to go in and update records to add, edit, and delete items, so having the data available in a relational database, rather than an Excel file or .csv file makes these tasks more efficient and accurate. 
 
@@ -73,8 +73,9 @@ To run the Flask API, you will need to run the python file (flask_app.py) in the
 The dataset we used for our project did not contain any personally identifiable information (PII) other than the names of the creators of the items included in the dataset. However, since there wasn't any other PII (like contact information, addresses, or social security numbers) we did not to take any special measures to protect the creator's information. Had there been other PII, we would have either had to remove it from the dataset (if it wasn't necessary) or add some security measure(s) to make sure that only authorized individuals would be able to access the information.
 
 ## Resources
+https://docs.dask.org/en/stable/ 
 ### Data Source
 https://www.loc.gov/item/2020446966/ 
 We downloaded the zipped file for [ English language ].
 
-### Outside code
+
