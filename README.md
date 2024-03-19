@@ -73,8 +73,9 @@ To run the Flask API, you will need to run the python file (flask_app.py) in the
 The dataset we used for our project did not contain any personally identifiable information (PII) other than the names of the creators of the items included in the dataset. However, since there wasn't any other PII (like contact information, addresses, or social security numbers) we did not to take any special measures to protect the creator's information. Had there been other PII, we would have either had to remove it from the dataset (if it wasn't necessary) or add some security measure(s) to make sure that only authorized individuals would be able to access the information.
 
 ## Resources
+https://docs.dask.org/en/stable/ 
 ### Data Source
 https://www.loc.gov/item/2020446966/ 
 We downloaded the zipped file for [ English language ].
 
-### Outside code
+
