@@ -61,13 +61,13 @@ CREATE TABLE lang_item (
 
 
 CREATE TABLE languages_id (
-    lang VARCHAR(1000)PRIMARY KEY ,
-	lang_id INT 
+    lang VARCHAR(1000),
+	lang_id INT PRIMARY KEY
 );
 
 CREATE TABLE place_id (
-    place VARCHAR(1000)PRIMARY KEY ,
-	place_id INT 
+    place VARCHAR(1000),
+	place_id INT PRIMARY KEY
 );
 
 CREATE TABLE place_item (
