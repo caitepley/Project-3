@@ -1,7 +1,7 @@
 # Project-3
 
 ## Overview
-For our project, we are using data from the Dataset of World Digital Library available on the Library of Congress’ website (loc.gov).  The data is available in a .csv format, so our goal was to extract, transform, and load the data into a relational database that can be used to access and analyze the data more readily than its current format. In a relational database format, the item records available in this dataset are more easily updated and are less likely to produce inconsistencies and errors when updating.
+For our project, we are using data from the Dataset of World Digital Library available on the Library of Congress’ website (loc.gov).  The data is available in a large, unwieldy .csv format, so our goal was to extract, transform, and load the data into a relational database that can be used to access and analyze the data more readily than its current format. In a relational database format, the item records available in this dataset are more easily updated and are less likely to produce inconsistencies and errors when updating.
 	
 We chose this topic for our project because we thought it would be a good real world application of a relational database. Libraries often need to go in and update records to add, edit, and delete items, so having the data available in a relational database, rather than an Excel file or .csv file makes these tasks more efficient and accurate. 
 
